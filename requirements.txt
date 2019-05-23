@@ -1,0 +1,11 @@
+altgraph==0.16.1
+future==0.17.1
+macholib==1.11
+mysqlclient==1.4.2.post1
+pefile==2018.8.8
+PyInstaller==3.4
+PyQt5==5.12.1
+PyQt5-sip==4.19.15
+pyserial==3.4
+PySide2==5.12.2
+shiboken2==5.12.2
