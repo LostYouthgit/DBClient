@@ -18,7 +18,7 @@ class QR:
     def qr(port):
         try:
             with serial.Serial('{}'.format(port), 115200, timeout=3) as ser:
-                line = ser.readline(20)
+                line = ser.readline(27)
                 global qr
                 line_str = str(line)
                 qr = line_str[2:-5:1]

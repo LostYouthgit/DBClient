@@ -23,3 +23,10 @@ board_name = {"01": "door",
               "31": "wall_switch",
               "33": "hub"
               }
+
+board_name_hub = {"1": "hub",
+                  "2": "hub_plus",
+                  "3": "hub_yavir"
+
+                  }
+

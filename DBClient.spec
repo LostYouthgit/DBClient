@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main_t.py'],
-             pathex=['/Users/yurasenchakov/PycharmProjects/untitled1'],
+             pathex=['/home/user/sr/DBClient/DBClient'],
              binaries=[],
              datas=[],
              hiddenimports=[],
