@@ -3,7 +3,8 @@ from PySide2 import QtWidgets
 from dev_db_requests import DB
 from qr_scanner_handler import QR
 from central_db_requests import DB_Central
-from qr_scanner_handler import qr
+
+qr = ""
 
 
 class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -34,7 +35,6 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
         self.comboBox.clear()
         for a in range(i):
             self.comboBox.addItem(self.port_list[a])
-            self.comboBox_hub.addItem(self.port_list[a])
             #self.comboBox.update()
 
     def UI(self):
@@ -56,45 +56,45 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
     def set_action(self, pressed):
         source = self.sender()
         if pressed:
-            if source.text() == 'REGISTER':
+            if source.objectName() == 'REGISTER':
                 self.register = 1
-            if source.text() == 'ADD PROG':
+            if source.objectName() == 'ADD_PROG':
                 self.add_prog = 1
-            if source.text() == 'ADD ASSEMBLER':
+            if source.objectName() == 'ADD_ASSEMBLER':
                 self.add_assembler = 1
-            if source.text() == 'ADD LONGTEST':
+            if source.objectName() == 'ADD_LONGTEST':
                 self.add_longtest = 1
-            if source.text() == 'ADD TESTROOM':
+            if source.objectName() == 'ADD_TESTROOM':
                 self.add_testroom = 1
             if source.objectName() == 'ADD_QC':
                 self.add_qc = 1
-            if source.text() == 'ADD PACKER':
+            if source.objectName() == 'ADD_PACKER':
                 self.add_packer = 1
-            if source.text() == 'ADD CALIB':
+            if source.objectName() == 'ADD_CALIB':
                 self.add_calib = 1
-            if source.text() == 'DELETE':
+            if source.objectName() == 'DELETE':
                 self.delete = 1
 
             else:
                 pass
         else:
-            if source.text() == 'REGISTER':
+            if source.objectName() == 'REGISTER':
                 self.register = 0
-            elif source.text() == 'ADD PROG':
+            elif source.objectName() == 'ADD_PROG':
                 self.add_prog = 0
-            elif source.text() == 'ADD ASSEMBLER':
+            elif source.objectName() == 'ADD_ASSEMBLER':
                 self.add_assembler = 0
-            elif source.text() == 'ADD LONGTEST':
+            elif source.objectName() == 'ADD_LONGTEST':
                 self.add_longtest = 0
-            elif source.text() == 'ADD TESTROOM':
+            elif source.objectName() == 'ADD_TESTROOM':
                 self.add_testroom = 0
-            elif source.text() == 'ADD QC':
+            elif source.objectName() == 'ADD_QC':
                 self.add_qc = 0
-            elif source.text() == 'ADD PACKER':
+            elif source.objectName() == 'ADD_PACKER':
                 self.add_packer = 0
-            elif source.text() == 'ADD CALIB':
+            elif source.objectName() == 'ADD_CALIB':
                 self.add_calib = 0
-            elif source.text() == 'DELETE':
+            elif source.objectName() == 'DELETE':
                 self.delete = 0
 
     def set_action_hub(self, pressed):
@@ -108,7 +108,7 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.add_assembler = 1
             if source.objectName() == 'ADD_LONGTEST_HUB':
                 self.add_longtest = 1
-            if source.objectName() == 'ADD_QC':
+            if source.objectName() == 'ADD_QC_HUB':
                 self.add_qc = 1
             if source.objectName() == 'ADD_PACKER_HUB':
                 self.add_packer = 1
@@ -138,9 +138,11 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
             self.exc_label.setText("")
             scanner = QR()
             scanner.qr(self.comboBox.currentText())
-
-            self.doAction(self.register, self.add_prog, self.add_assembler, self.add_longtest, self.add_testroom, self.add_qc, self.add_packer, self.add_calib, self.delete)
-
+            from qr_scanner_handler import qr
+            if len(qr) == 9:
+                self.doAction(self.register, self.add_prog, self.add_assembler, self.add_longtest, self.add_testroom, self.add_qc, self.add_packer, self.add_calib, self.delete)
+            if len(qr) == 23:
+                self.doAction_hub(self.register_hub, self.add_prog_hub, self.add_assembler_hub, self.add_longtest_hub, self.add_qc_hub, self.add_packer_hub, self.delete_hub)
         except Exception as err:
             self.exc_label.setText("{}".format(err))
 
@@ -183,24 +185,31 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
         except Exception as err:
             self.exc_label.setText("{}".format(err))
 
-    def doAction_hub(self, register, add_prog, add_assembler, add_longtest, add_testroom, add_qc, add_packer, add_calib, delete):
-        self.register = register
-        self.add_prog = add_prog
-        self.add_assembler = add_assembler
-        self.add_longtest = add_longtest
-        self.add_testroom = add_testroom
-        self.add_qc = add_qc
-        self.add_packer = add_packer
-        self.add_calib = add_calib
-        self.delete = delete
+    def doAction_hub(self, register_hub, add_prog_hub, add_assembler_hub, add_longtest_hub, add_qc_hub, add_packer_hub, delete_hub):
+        self.register_hub = register_hub
+        self.add_prog_hub = add_prog_hub
+        self.add_assembler_hub = add_assembler_hub
+        self.add_longtest_hub = add_longtest_hub
+        self.add_qc_hub = add_qc_hub
+        self.add_packer_hub = add_packer_hub
+        self.delete_hub = delete_hub
         try:
             from qr_scanner_handler import qr
-            print("SSS")
             db = DB_Central()
-            if self.register == 1:
+            if self.register_hub == 1:
                 db.register()
-            if self.add_prog == 1:
+            if self.add_prog_hub == 1:
                 db.add_prog()
+            if self.add_assembler_hub == 1:
+                db.add_assembler()
+            if self.add_longtest_hub == 1:
+                db.add_longtest()
+            if self.add_qc_hub == 1:
+                db.add_qc()
+            if self.add_packer_hub == 1:
+                db.add_packer()
+            if self.delete_hub == 1:
+                db.delete()
             else:
                 pass
             res = db.save_changes()
