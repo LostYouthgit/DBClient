@@ -3,12 +3,13 @@
 # Form implementation generated from reading ui file 'main_gui.ui',
 # licensing of 'main_gui.ui' applies.
 #
-# Created: Fri May 24 20:31:06 2019
+# Created: Mon May 27 17:14:16 2019
 #      by: pyside2-uic  running on PySide2 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide2 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -154,15 +155,10 @@ class Ui_MainWindow(object):
         self.START_HUB = QtWidgets.QPushButton(self.tab_2)
         self.START_HUB.setGeometry(QtCore.QRect(30, 590, 141, 61))
         self.START_HUB.setObjectName("START_HUB")
-        self.comboBox_hub = QtWidgets.QComboBox(self.tab_2)
-        self.comboBox_hub.setGeometry(QtCore.QRect(920, 610, 181, 26))
-        self.comboBox_hub.setMouseTracking(False)
-        self.comboBox_hub.setEditable(False)
-        self.comboBox_hub.setObjectName("comboBox_hub")
         self.tabWidget.addTab(self.tab_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar()
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1171, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1171, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
