@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fc80706-a451-4186-b533-b14380502bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DBClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DBClient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/PKG-00.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/warn-DBClient.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/warn-DBClient.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/DBClient/xref-DBClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/DBClient/xref-DBClient.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calib_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/calib_json.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/central_db_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/central_db_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_gui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/main_gui.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev_db_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/dev_db_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/DBClient" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_t.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_t.py" afterDir="false" />
     </list>
     <list id="b64c219e-eb2c-4cd4-9a12-6fadb12a93d9" name="Revert &quot;Update GUI central&quot;" comment="Revert &quot;Update GUI central&quot;&#10;&#10;This reverts commit 10734f1d" />
@@ -23,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev_db_requests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -35,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="173" column="18" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="18" />
+            <state relative-caret-position="312">
+              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
             </state>
           </provider>
         </entry>
@@ -45,16 +52,16 @@
         <entry file="file://$PROJECT_DIR$/db_connect.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/central_db_requests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="23" />
+            <state relative-caret-position="-108">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -74,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calib_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+            <state relative-caret-position="1933">
+              <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -92,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_t.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+            <state relative-caret-position="229">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -117,9 +124,10 @@
         <option value="$PROJECT_DIR$/qr_scanner_handler.py" />
         <option value="$PROJECT_DIR$/dev_types.py" />
         <option value="$PROJECT_DIR$/main_gui.py" />
-        <option value="$PROJECT_DIR$/calib_json.py" />
-        <option value="$PROJECT_DIR$/main_t.py" />
         <option value="$PROJECT_DIR$/central_db_requests.py" />
+        <option value="$PROJECT_DIR$/calib_json.py" />
+        <option value="$PROJECT_DIR$/dev_db_requests.py" />
+        <option value="$PROJECT_DIR$/main_t.py" />
       </list>
     </option>
   </component>
@@ -222,19 +230,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24143384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19644724" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19644724" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291536" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27795193" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27795193" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -287,13 +296,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update GUI central" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dev_types.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qr_scanner_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -304,17 +306,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db_connect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/calib_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        <state relative-caret-position="1933">
+          <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev_db_requests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/central_db_requests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -323,34 +356,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_t.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+        <state relative-caret-position="229">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="173" column="18" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_connect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/central_db_requests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

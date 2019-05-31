@@ -60,10 +60,16 @@ class DB:
 
     def add_prog(self):
         global qr_code
-        sql = "INSERT INTO debug_production.dev_prog (qr, operator, success, time, info) VALUES (%s, %s, %s, %s, %s)"  # <<< PROG
-        val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"])
+        if self.board_name == 'mpo':
+            sql = "INSERT INTO debug_production.dev_prog (qr, operator, success, time, info) VALUES (%s, %s, %s, %s, %s)"  # <<< PROG
+            val = (qr_code, fields["_operator"], fields["_success"], self.time, json.dumps(calib_json.mpo_prog_info))
 
-        self.cur.execute(sql, val)
+            self.cur.execute(sql, val)
+        else:
+            sql = "INSERT INTO debug_production.dev_prog (qr, operator, success, time, info) VALUES (%s, %s, %s, %s, %s)"  # <<< PROG
+            val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"])
+
+            self.cur.execute(sql, val)
 
     def add_assembler(self):
         global qr_code

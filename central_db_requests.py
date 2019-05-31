@@ -10,7 +10,7 @@ fields = {"region": 'EU',
           "_operator": 'e',
           "_success": '1',
           "_info": '1',
-          "_grade": '1'
+          "_grade": '0'
           }
 
 
@@ -78,14 +78,14 @@ class DB_Central:
     def add_longtest(self):
         global qr_code
         sql = "INSERT INTO debug_production.central_long_test (qr, operator, success, time, info) VALUES (%s, %s, %s, %s, %s)"  # <<< PROG
-        val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"])
+        val = (qr_code, fields["_operator"], fields["_success"], self.time, json.dumps(calib_json.hub_long_info))
 
         self.cur.execute(sql, val)
 
     def add_qc(self):
         global qr_code
         sql = "INSERT INTO debug_production.central_qc (qr, operator, success, time, info, grade) VALUES (%s, %s, %s, %s, %s, %s)"  # <<< QC
-        val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"], fields["_grade"])
+        val = (qr_code, fields["_operator"], fields["_success"], self.time, json.dumps(calib_json.hub_qc_info), fields["_grade"])
 
         self.cur.execute(sql, val)
 

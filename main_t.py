@@ -33,9 +33,9 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
         self.port_list = QR().port_choose()
         i = len(self.port_list)
         self.comboBox.clear()
+        print("dsad")
         for a in range(i):
             self.comboBox.addItem(self.port_list[a])
-            #self.comboBox.update()
 
     def UI(self):
         self.comboBox.view().pressed.connect(self.port_choose())
@@ -52,6 +52,10 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
         self.START_HUB.clicked[bool].connect(self.start)
         self.REGISTER_HUB.clicked[bool].connect(self.set_action_hub)
         self.ADD_PROG_HUB.clicked[bool].connect(self.set_action_hub)
+        self.ADD_ASSEMBLER_HUB.clicked[bool].connect(self.set_action_hub)
+        self.ADD_LONGTEST_HUB.clicked[bool].connect(self.set_action_hub)
+        self.ADD_QC_HUB.clicked[bool].connect(self.set_action_hub)
+        self.ADD_PACKER_HUB.clicked[bool].connect(self.set_action_hub)
         self.DELETE_HUB.clicked[bool].connect(self.set_action_hub)
 
     def set_action(self, pressed):
