@@ -31,11 +31,8 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def port_choose(self):
         self.port_list = QR().port_choose()
-        i = len(self.port_list)
         self.comboBox.clear()
-        print("dsad")
-        for a in range(i):
-            self.comboBox.addItem(self.port_list[a])
+        self.comboBox.addItems(self.port_list)
 
     def UI(self):
         self.comboBox.view().pressed.connect(self.port_choose())
@@ -140,7 +137,8 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def start(self):
         try:
-            self.exc_label.setText("")
+            self.exc_label.clear()
+            self.exc_label_hub.clear()
             scanner = QR()
             scanner.qr(self.comboBox.currentText())
             from qr_scanner_handler import qr
@@ -152,35 +150,26 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
             self.exc_label.setText("{}".format(err))
 
     def doAction(self, register, add_prog, add_assembler, add_longtest, add_testroom, add_qc, add_packer, add_calib, delete):
-        self.register = register
-        self.add_prog = add_prog
-        self.add_assembler = add_assembler
-        self.add_longtest = add_longtest
-        self.add_testroom = add_testroom
-        self.add_qc = add_qc
-        self.add_packer = add_packer
-        self.add_calib = add_calib
-        self.delete = delete
         try:
             from qr_scanner_handler import qr
             db = DB()
-            if self.register == 1:
+            if register == 1:
                 db.register()
-            if self.add_prog == 1:
+            if add_prog == 1:
                 db.add_prog()
-            if self.add_assembler == 1:
+            if add_assembler == 1:
                 db.add_assembler()
-            if self.add_calib == 1:
+            if add_calib == 1:
                 db.add_calibration()
-            if self.add_longtest == 1:
+            if add_longtest == 1:
                 db.add_longtest()
-            if self.add_testroom == 1:
+            if add_testroom == 1:
                 db.add_testroom()
-            if self.add_qc == 1:
+            if add_qc == 1:
                 db.add_qc()
-            if self.add_packer == 1:
+            if add_packer == 1:
                 db.add_packer()
-            if self.delete == 1:
+            if delete == 1:
                 db.delete()
             else:
                 pass
@@ -191,29 +180,22 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
             self.exc_label.setText("{}".format(err))
 
     def doAction_hub(self, register_hub, add_prog_hub, add_assembler_hub, add_longtest_hub, add_qc_hub, add_packer_hub, delete_hub):
-        self.register_hub = register_hub
-        self.add_prog_hub = add_prog_hub
-        self.add_assembler_hub = add_assembler_hub
-        self.add_longtest_hub = add_longtest_hub
-        self.add_qc_hub = add_qc_hub
-        self.add_packer_hub = add_packer_hub
-        self.delete_hub = delete_hub
         try:
             from qr_scanner_handler import qr
             db = DB_Central()
-            if self.register_hub == 1:
+            if register_hub == 1:
                 db.register()
-            if self.add_prog_hub == 1:
+            if add_prog_hub == 1:
                 db.add_prog()
-            if self.add_assembler_hub == 1:
+            if add_assembler_hub == 1:
                 db.add_assembler()
-            if self.add_longtest_hub == 1:
+            if add_longtest_hub == 1:
                 db.add_longtest()
-            if self.add_qc_hub == 1:
+            if add_qc_hub == 1:
                 db.add_qc()
-            if self.add_packer_hub == 1:
+            if add_packer_hub == 1:
                 db.add_packer()
-            if self.delete_hub == 1:
+            if delete_hub == 1:
                 db.delete()
             else:
                 pass

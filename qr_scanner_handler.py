@@ -17,7 +17,7 @@ class QR:
     @staticmethod
     def qr(port):
         try:
-            with serial.Serial('{}'.format(port), 115200, timeout=3) as ser:
+            with serial.Serial('{}'.format(port), 115200, timeout=4) as ser:
                 line = ser.readline(27)
                 global qr
                 line_str = str(line)
