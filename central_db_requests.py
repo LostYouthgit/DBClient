@@ -31,7 +31,7 @@ class DB_Central:
         self.dev_type = "33"
         self.hub_subtype = ""
         self.time = ""
-        self.color = "white"
+        self.color = ""
         self.konstruct()
 
     def konstruct(self):
@@ -39,9 +39,14 @@ class DB_Central:
         global qr_code
         qr_code = qr[:9] + "**-*****-*" + qr[19:]
         self.central_id = qr[:9].replace("-", "")
+        print(qr_code)
         if not qr:
             print("NOT QR")
             return
+        if qr_code[19] == "1":
+            self.color = "white"
+        if qr_code[19] == "2":
+            self.color = "black"
         if qr_code[20] == "1":
             self.hub_subtype = "1"
         if qr_code[20] == "3":
@@ -50,6 +55,8 @@ class DB_Central:
             self.hub_subtype = "3"
         if qr_code[20] == "4":
             self.hub_subtype = "4"
+        if qr_code[20] == "5":
+            self.hub_subtype = "5"
         else:
             pass
         self.board_name = dev_types.board_name_hub["{}".format(self.hub_subtype)]
@@ -134,5 +141,8 @@ class DB_Central:
         res = str(self.cur.fetchall())
         res = res.replace("), ", "\n")
         self.db.autocommit(True)
-        self.db.close()
         return res
+
+    def close_conn(self):
+        self.db.close()
+

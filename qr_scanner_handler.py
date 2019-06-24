@@ -1,5 +1,5 @@
 import serial
-
+import logging
 from serial.tools.list_ports import comports
 
 qr = ""

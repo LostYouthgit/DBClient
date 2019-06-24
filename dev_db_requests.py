@@ -67,7 +67,7 @@ class DB:
             self.cur.execute(sql, val)
         else:
             sql = "INSERT INTO debug_production.dev_prog (qr, operator, success, time, info) VALUES (%s, %s, %s, %s, %s)"  # <<< PROG
-            val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"])
+            val = (qr_code, fields["_operator"], fields["_success"], self.time, json.dumps(calib_json.general_prog_info))
 
             self.cur.execute(sql, val)
 
@@ -132,8 +132,8 @@ class DB:
 
     def add_qc(self):
         global qr_code
-        sql = "INSERT INTO debug_production.dev_qc (qr, operator, success, time, info, grade) VALUES (%s, %s, %s, %s, %s, %s)"  # <<< QC
-        val = (qr_code, fields["_operator"], fields["_success"], self.time, fields["_info"], fields["_grade"])
+        sql = "INSERT INTO debug_production.dev_qc (qr, operator, success, time, info, defects, grade) VALUES (%s, %s, %s, %s, %s, %s, %s)"  # <<< QC
+        val = (qr_code, fields["_operator"], fields["_success"], self.time, json.dumps(calib_json.general_qc_info), '""', fields["_grade"])
 
         self.cur.execute(sql, val)
 
@@ -182,5 +182,7 @@ class DB:
         res = str(self.cur.fetchall())
         res = res.replace("), ", "\n")
         self.db.autocommit(True)
-        self.db.close()
         return res
+
+    def close_conn(self):
+        self.db.close()

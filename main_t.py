@@ -1,8 +1,11 @@
+# log_with_config.py
 from main_gui import Ui_MainWindow
 from PySide2 import QtWidgets
 from dev_db_requests import DB
 from qr_scanner_handler import QR
 from central_db_requests import DB_Central
+import logging
+import logging.config
 
 qr = ""
 
@@ -146,13 +149,16 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.doAction(self.register, self.add_prog, self.add_assembler, self.add_longtest, self.add_testroom, self.add_qc, self.add_packer, self.add_calib, self.delete)
             if len(qr) == 23:
                 self.doAction_hub(self.register_hub, self.add_prog_hub, self.add_assembler_hub, self.add_longtest_hub, self.add_qc_hub, self.add_packer_hub, self.delete_hub)
+            else:
+                pass
         except Exception as err:
             self.exc_label.setText("{}".format(err))
 
     def doAction(self, register, add_prog, add_assembler, add_longtest, add_testroom, add_qc, add_packer, add_calib, delete):
+        db = DB()
         try:
             from qr_scanner_handler import qr
-            db = DB()
+            print(">>>>>>>>>>>>>yes")
             if register == 1:
                 db.register()
             if add_prog == 1:
@@ -178,11 +184,15 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
             self.output_label.setText("{}".format(res))
         except Exception as err:
             self.exc_label.setText("{}".format(err))
+        finally:
+            db.close_conn()
+            print("CONN CLOSE")
 
     def doAction_hub(self, register_hub, add_prog_hub, add_assembler_hub, add_longtest_hub, add_qc_hub, add_packer_hub, delete_hub):
+        db = DB_Central()
         try:
             from qr_scanner_handler import qr
-            db = DB_Central()
+            print(">>>>>>>>>>>>>yesyes")
             if register_hub == 1:
                 db.register()
             if add_prog_hub == 1:
@@ -204,6 +214,9 @@ class MainT(QtWidgets.QMainWindow, Ui_MainWindow):
             self.output_label_hub.setText("{}".format(res))
         except Exception as err:
             self.exc_label_hub.setText("{}".format(err))
+        finally:
+            db.close_conn()
+            print("CONN CLOSE")
 
 
 if __name__ == '__main__':

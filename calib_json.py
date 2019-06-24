@@ -198,3 +198,106 @@ hub_qc_info = {
 	"app" : "New_QC 0.1.68",
 	"description" : "Стандартний"
 }
+
+general_prog_info = {
+	"app_ver" : "3.38.7",
+	"constants" : {
+		"512_TEST" : {
+			"AVERAGE_512_TIME" : "25",
+			"FREQUENCY_DEVIATION" : "12",
+			"MAX_V" : "3.1",
+			"MIN_V" : "2.9"
+		},
+		"BATTERY_MEASURER" : {
+			"V_TOLERANCE" : "6.0"
+		},
+		"BUZZER_TEST" : {
+			"G_MAX_OPEN_TRANSISTOR_VOLTAGE" : "3.0",
+			"G_MIN_OPEN_TRANSISTOR_VOLTAGE" : "0.4",
+			"MAX_CURR_HIGH" : "1000.0",
+			"MAX_CURR_LOW" : "30.0",
+			"MAX_OFF_KEY_VOLTAGE" : "0.3",
+			"MAX_VOLTAGE_HIGH" : "27.0",
+			"MAX_VOLTAGE_LOW" : "6.0",
+			"MIN_CURR_HIGH" : "500.0",
+			"MIN_CURR_LOW" : "7.0",
+			"MIN_DIFF_VOLTAGE" : "2.0",
+			"MIN_VOLTAGE_HIGH" : "23.0",
+			"MIN_VOLTAGE_LOW" : "4",
+			"M_MAX_OPEN_TRANSISTOR_VOLTAGE" : "7.0",
+			"M_MIN_OPEN_TRANSISTOR_VOLTAGE" : "0.4"
+		},
+		"DEBUG_INIT" : {
+			"START_TIME" : "5000"
+		},
+		"LED" : {
+			"GND_RES_MAX" : "48",
+			"GND_RES_MIN" : "40",
+			"MAX_VOLTAGE_EXT" : "3.1",
+			"MAX_VOLTAGE_SYS" : "2.8",
+			"MIN_VOLTAGE_EXT" : "2.8",
+			"MIN_VOLTAGE_SYS" : "2.2",
+			"OFF_VOLTAGE_EXT" : "0.5"
+		},
+		"LOW_VOLTAGE_DCDC_TEST" : {
+			"MIN_VOLTAGE" : "16.0"
+		},
+		"RFM_TEST" : {
+			"FREQUENCY_DEVIATION" : "7",
+			"RSSI_RX" : "-70",
+			"RSSI_TX" : "-87"
+		},
+		"SLEEP_CURRENT" : {
+			"MAX_CURRENT" : "7"
+		},
+		"SMOKE_TEST" : {
+			"MAX_C" : "100",
+			"MAX_V" : "3.1",
+			"MIN_C" : "-0.003",
+			"MIN_V" : "1.2"
+		},
+		"VOLUME_REGULATION" : {
+			"MAX_VOLUME_MAX_VOLTAGE" : "27.0",
+			"MAX_VOLUME_MID_VOLTAGE" : "18.0",
+			"MAX_VOLUME_MIN_VOLTAGE" : "6.0",
+			"MIN_VOLUME_MAX_VOLTAGE" : "23.0",
+			"MIN_VOLUME_MID_VOLTAGE" : "12.0",
+			"MIN_VOLUME_MIN_VOLTAGE" : "4.0"
+		}
+	},
+	"fw_ver" : "3.67.0",
+	"stand_id" : "ff252a",
+	"stand_ver" : "2.43",
+	"test_results" : {
+		"G_diff_voltage" : "2.9777V",
+		"G_h_key_voltage" : "1.2353V",
+		"G_l_key_voltage" : "0.8515V",
+		"M_diff_voltage" : "2.5877V",
+		"M_h_key_voltage" : "3.3380V",
+		"M_l_key_voltage" : "2.6055V",
+		"battery_v" : "2.739",
+		"crystal_dev" : "0.0 us",
+		"current" : "0.002mA",
+		"dc_dc_high_curr" : "714.60mA",
+		"dc_dc_high_voltage" : "25.514V",
+		"dc_dc_low_curr" : "12.367mA",
+		"dc_dc_low_voltage" : "4.454V",
+		"ext_led_off_V" : "0.004V",
+		"ext_led_on_V" : "3.078V",
+		"fr_delta" : "-122 Hz",
+		"fr_dev" : -133,
+		"fr_rssi_rx" : -25,
+		"fr_rssi_tx" : -31,
+		"fw_ver" : "3.67.0",
+		"ground res" : "44.596 Ohm",
+		"led_voltage" : "2.403V",
+		"max_vol_v" : "25.366V",
+		"meas tolerance" : "0.4486 %",
+		"mid_vol_v" : "14.696V",
+		"min_vol_v" : "4.884V",
+		"off_key_voltage" : "0.058V",
+		"t_value" : "28 degrees"
+	}
+}
+
+general_qc_info = {"app": "New_QC 1.4.3"}

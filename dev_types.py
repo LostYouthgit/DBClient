@@ -26,7 +26,8 @@ board_name = {"01": "door",
 
 board_name_hub = {"1": "hub",
                   "2": "hub_plus",
-                  "3": "hub_yavir"
-
+                  "3": "hub_yavir",
+                  "4": "s",
+                  "5": "hub2"
                   }
 
